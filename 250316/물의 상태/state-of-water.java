@@ -7,7 +7,7 @@ public class Main {
         int temperture = sc.nextInt();
 
         if (temperture >= 100) {
-            System.out.println("ice");
+            System.out.println("vapor");
         }
         else if (temperture >= 0) {
             System.out.println("water");
