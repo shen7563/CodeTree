@@ -9,7 +9,7 @@ public class Main {
         int b_age = sc.nextInt();
         String b_gender = sc.next();
 
-        if((a_age >= 19 || b_age >= 19) && (a_gender.charAt(0) == 'M' || b_gender.charAt(0) == 'M')) {
+        if((a_age >= 19 && a_gender.charAt(0) == 'M') || (b_age >= 19 && b_gender.charAt(0) == 'M')) {
             System.out.println(1);
         }
         else {
