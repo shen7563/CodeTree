@@ -6,6 +6,6 @@ public class Main {
 
         int a = sc.nextInt();
 
-        System.out.println((a >= 10) && (a < 20) ? "yes" : "no");
+        System.out.println((a >= 10) && (a <= 20) ? "yes" : "no");
     }
 }
