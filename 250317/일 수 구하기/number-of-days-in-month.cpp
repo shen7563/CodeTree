@@ -6,7 +6,7 @@ int main()
     int month = 0;
     cin >> month;
 
-    if(month % 2 == 0) {
+    if(month == 2) {
         cout << 28;
     }
     else if(month <= 7) {
