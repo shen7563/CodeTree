@@ -16,6 +16,8 @@ int main()
         sum += m;
     }
     avg = (double)sum / n;
+    cout << fixed;
+    cout.precision(1);
     cout << sum << " " << avg;
     return 0;
 }
