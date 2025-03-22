@@ -11,13 +11,11 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         for(int i = 0; i < 10; i++) {
-            if(arr[i] >= 250 || i == 9) {
-                avg = (double)sum / i;
+            if(arr[i] >= 250) {
                 break;
             }
-            else {
-                sum += arr[i];
-            }
+            sum += arr[i];
+            avg = (double)sum / (i + 1);
         }
         System.out.printf("%d %.1f", sum, avg);
         sc.close();
