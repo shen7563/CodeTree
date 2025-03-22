@@ -11,7 +11,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         for(int i = 0; i < 10; i++) {
-            if(arr[i] >= 250) {
+            if(arr[i] >= 250 || i == 9) {
                 avg = (double)sum / i;
                 break;
             }
