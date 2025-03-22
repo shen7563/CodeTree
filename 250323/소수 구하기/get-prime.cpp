@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    int n = 0;
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 2; j <= i; j++)
+        {
+            if (i % j == 0 && i != j)
+            {
+                break;
+            }
+            else if (i == j)
+            {
+                cout << i << " ";
+            }
+        }
+    }
+    return 0;
+}
