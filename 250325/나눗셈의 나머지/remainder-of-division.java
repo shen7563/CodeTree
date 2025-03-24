@@ -8,7 +8,7 @@ public class Main {
         int b = sc.nextInt();
         int sum = 0;
         int namuji[] = new int[11];
-        while (a != 0) {
+        while (a >= 2) {
             namuji[a % b]++;
             a = a / b;
         }
