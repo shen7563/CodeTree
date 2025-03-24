@@ -17,12 +17,12 @@ public class Main {
                     count++;
                 }
                 else {
-                    emergency[1]++;
+                    emergency[2]++;
                 }
             }
             else {
                 if(temp[i] >= 37) {
-                    emergency[2]++;
+                    emergency[1]++;
                 }
                 else {
                     emergency[3]++;
