@@ -1,21 +1,24 @@
-import java.util.Scanner;
+#include <iostream>
+using namespace std;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
 
-        int arr[] = new int[100];
-        int scoreArr[] = new int[11];
-        for(int i = 0; i < 100; i++) {
-            arr[i] = sc.nextInt();
-            if(arr[i] == 0) {
-                break;
-            }
-            scoreArr[arr[i] / 10]++;
+    int score[100] = {0, };
+    int scoreCount[11] = {0, };
+    for(int i = 0; i < 100; i++)
+    {
+        cin >> score[i];
+        if(score[i] == 0) {
+            break;
         }
-        for(int i = 10; i >= 1; i--) {
-            System.out.printf("%d - %d\n", i * 10, scoreArr[i]);
-        }
-        sc.close();
+        scoreCount[score[i] / 10]++;
     }
+    for(int i = 10; i >= 1; i--) {
+        cout << i * 10 << " - " << scoreCount[i] << "\n";
+    }
+    return 0;
 }
