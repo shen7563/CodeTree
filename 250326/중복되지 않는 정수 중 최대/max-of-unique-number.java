@@ -7,21 +7,27 @@ public class Main {
         int n = sc.nextInt();
         int[] arr = new int[1000];
         int max = Integer.MIN_VALUE;
-        boolean flag = false;
-        for(int i = 0; i < n; i++) {
+        boolean isUnique;
+        for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-            if(max == arr[i]) {
-                flag = true;
+        }
+
+        for (int i = 0; i < n; i++) {
+            isUnique = true;
+            for (int j = 0; j < n; j++) {
+                if (i != j && arr[i] == arr[j]) {
+                    isUnique = false;
+                    break;
+                }
             }
-            if(arr[i] > max) {
+            if (isUnique && arr[i] > max) {
                 max = arr[i];
-                flag = false;
             }
         }
-        if(flag) {
+
+        if (max == Integer.MIN_VALUE) {
             System.out.println(-1);
-        }
-        else {
+        } else {
             System.out.println(max);
         }
         sc.close();
