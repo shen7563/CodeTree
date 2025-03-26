@@ -23,15 +23,20 @@ int main()
         }
         else if(type == 2) {
             int b = 0;
-            int index = 0;
+            int count = 0;
             cin >> b ;
             for(int j = 0; j < n; j++) {
                 if(arr[j] == b) {
-                    index = j;
+                    cout << j + 1 << "\n";
                     break;
                 }
+                else {
+                    count++;
+                }
             }
-            cout << index + 1 << "\n";
+            if(count == n) {
+                cout << 0 << "\n";
+            }
         }
         else {
             int s = 0, e = 0;
