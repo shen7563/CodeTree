@@ -18,7 +18,7 @@ int main()
         if(arr[i] > max_first) {
             max_second = max_first;
             max_first = arr[i];
-        } else if(arr[i] > max_second && arr[i] != max_first) {
+        } else if(arr[i] > max_second) {
             max_second = arr[i];
         }
     }
