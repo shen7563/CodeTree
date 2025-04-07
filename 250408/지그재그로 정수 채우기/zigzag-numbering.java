@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int count = 0;
-        int arr[][] = new int[10][10];
+        int arr[][] = new int[100][100];
         for(int i = 0; i < m; i++) {
             if(i % 2 == 1) {
                 for(int j = n - 1; j >= 0; j--) {
