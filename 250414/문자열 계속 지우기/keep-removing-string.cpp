@@ -13,7 +13,8 @@ int main()
     string remove;
     cin >> remove;
     while(s.find(remove) != string::npos) {
-        s.erase(s.find(remove));
+        int pos = s.find(remove);
+        s.erase(pos, remove.length());
     }
     cout << s;
     return 0;
