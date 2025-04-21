@@ -20,7 +20,7 @@ public class Main {
         }
         Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
         Arrays.sort(arr2, Collections.reverseOrder());
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < 2 * n; i++) {
             answer[i] = arr1[i] + arr2[i];
             if(answer[i] > max) {
                 max = answer[i];
