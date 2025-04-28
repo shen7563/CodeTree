@@ -15,6 +15,9 @@ class Distance {
 };
 
 bool Compare(Distance a, Distance b) {
+    if(abs(a.x) + abs(a.y) == abs(b.x) + abs(b.y)) {
+        return a.index < b.index;
+    }
     return abs(a.x) + abs(a.y) < abs(b.x) + abs(b.y);
 }
 int main() {
