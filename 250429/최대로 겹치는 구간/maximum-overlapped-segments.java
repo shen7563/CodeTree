@@ -9,8 +9,8 @@ public class Main {
         for(int i = 0; i < n; i++) {
             int x = sc.nextInt() + offset;
             int y = sc.nextInt() + offset;
-            for(int j = x; j <= y; j++) {
-                arr[j + 1]++;
+            for(int j = x; j < y; j++) {
+                arr[j]++;
             }
         }
         int max = Integer.MIN_VALUE;
