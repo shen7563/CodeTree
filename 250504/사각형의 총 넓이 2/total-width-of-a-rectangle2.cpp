@@ -1,7 +1,7 @@
 #include <iostream>
 
 #define MAX_N 201
-
+#define OFFSET 100 // 좌표를 음수에서 양수로 변환하기 위한 오프셋
 using namespace std;
 
 int n;
@@ -17,6 +17,11 @@ int main()
     cin >> n; //n개의 직사각형
     for(int i = 0; i < n; i++) {
         cin >> x1 >> y1 >> x2 >> y2;
+        // 좌표를 OFFSET만큼 이동하여 음수를 양수로 변환
+        x1 += OFFSET;
+        y1 += OFFSET;
+        x2 += OFFSET;
+        y2 += OFFSET;
         // 직사각형의 좌표를 입력받고, 해당 영역을 true로 설정
         for(int j = x1; j < x2; j++) {
             for(int k = y1; k < y2; k++) {
