@@ -16,22 +16,12 @@ public class Main {
         int count = 0;
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
-            if (i == 0) {
-                if (arr[i] > t) {
-                    count++;
-                } else {
-                    continue;
-                }
-            } 
+            if(arr[i] > t) {
+                count++;
+                max = Math.max(max, count);
+            }
             else {
-                if (arr[i] > t) {
-                    if (arr[i] > arr[i - 1]) {
-                        count++;
-                    }
-                } else {
-                    max = Math.max(max, count);
-                    count = 1;
-                }
+                count = 0;
             }
         }
         max = Math.max(max, count);
